@@ -48,7 +48,24 @@
 
 (contains? [1 2 3] 3)
 
+(println println)
 
+(println 'println)
+
+'a
+
+'가
+
+;아래와 같이 하면 
+; a라는 심볼과 값 1 사이에 var이라는 것을 만들어
+;연결을 한다. 
+(def a 1)
+
+(println a)
+
+;a라는 심볼을 만나면 var로 연결된 값을 찾는다
+;위에서 1로 연결 했기 때문에 1이다.
+a
 
 
 

@@ -13,3 +13,6 @@ a
 (def a 2)
 
 (println a)
+
+(def c "c에 대한 설명 입니다." 1)
+(doc c)

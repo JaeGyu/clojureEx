@@ -16,3 +16,15 @@ a
 
 (def c "c에 대한 설명 입니다." 1)
 (doc c)
+
+
+'(1 2 "jam" :marmalade-jar)
+
+'(1 2 3)
+'(1,2,3)
+
+(list 1 2 3)
+
+(cons 2 (cons 1 nil))
+
+(cons 1 '())

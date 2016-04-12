@@ -92,6 +92,15 @@ a
 
 ((fn [x] (str x ".....")) "ff")
 
+(#(+ %1 %2) 1 2)
+
+(#(println %) "Hello World")
+
+(defn add [x y] (+ x y))
+
+(add 1 2)
+
+
 
 
 

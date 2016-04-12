@@ -100,6 +100,12 @@ a
 
 (add 1 2)
 
+(defn add "더하기 입니다." [x y] (+ x y))
+
+(doc add)
+
+(add 9 9)
+
 
 
 

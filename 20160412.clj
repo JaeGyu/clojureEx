@@ -12,7 +12,6 @@
 
 (identical? a (def a 3))
 
-
 (def a "A value." 1)
 
 (doc a)
@@ -108,12 +107,45 @@ a
 
 (add 9 9)
 
+;mul함수에서 x,y를 파라매터로 받고 있지만
+;함수의 body에서 let을 사용해서 무조건 x=1,y=1로 세팅되게 하고 있다.
 (defn mul [x y] (let [x 1 y 1] (* x y)))
 
 (mul 1 2)
 
+(let [a 1 b 3] (+ a b))
 
+(def a 1)
+(def b 2)
+(let [a 10 b 20] (+ a b))
 
+(defn apply_one_two [f] (f 1 2))
+
+(defn mul [x y] (* x y))
+
+(apply_one_two mul)
+
+(defn increase [x] (+ x 1))
+
+(increase 3)
+
+(defn get_increase_function [] increase)
+
+((get_increase_function) 1)
+
+(increase ((fn [x] (+ x 1)) 1))
+
+(defn put_two_number [f,x,y] (f x y))
+
+(put_two_number mul 2 3)
+
+(#(+ %1 %2) 1 2)
+
+(put_two_number #(+ %1 %2) 4 5)
+
+(put_two_number (fn [x y] (* x y)) 4 5)
+
+((fn [] (str "gg")))
 
 
 

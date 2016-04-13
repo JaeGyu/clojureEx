@@ -5,7 +5,6 @@
 
 (println a)
 
-
 (def a 2)
 
 (println a)
@@ -147,9 +146,32 @@ a
 
 ((fn [] (str "gg")))
 
+;closure
 
+(defn add [x] (fn [y] (+ x y)))
 
+;(add 1)까지 한결과로는
+;(fn [y] (+ 1 y))를 반환 한다.
+;이 상태에서 2가 y로 넘겨지면서 계산이 된다.
+;x의 값인 1이 그대로 살아 있다.
+;closure 기능
+;잘 이해가 안감
+((add 1) 2)
 
+(defn get_ys [x & y] y)
+
+(get_ys 1)
+(get_ys 1 2)
+(get_ys 1 2 3 4)
+
+; &선언후 한칸 뛰어 준 다음 x를 지정해 줘야 함
+(defn get_ys2 [& x] x)
+
+(get_ys2 1 2 3)
+
+(get_ys2 )
+
+(get_ys2 1)
 
 
 

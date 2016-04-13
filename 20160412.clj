@@ -102,9 +102,18 @@ a
 
 (defn add "더하기 입니다." [x y] (+ x y))
 
+(defn add "더하기 함수 입니다. \n사용 방법은 아래와 같습니다.\nex) (add 1 2)" [x y] (+ x y))
+
 (doc add)
 
 (add 9 9)
+
+(defn mul [x y] (let [x 1 y 1] (* x y)))
+
+(mul 1 2)
+
+
+
 
 
 
